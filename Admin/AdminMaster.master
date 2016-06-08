@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="Stylesheet" href="AdminCSS.css" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+   <form id="form1" runat="server">
+      
+    <table width="950" border="0" align="center" cellpadding="0" cellspacing="0" style="border-left:solid 1px #d7d7d7; border-right:solid 1px #d7d7d7">
+        <tr>
+            <td class="header_bg">
+                <a href="AdminPanel.aspx" class="logo">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nev">
+                <table class="comman_heading" width="100%" border="0" cellpadding="0" cellspacing="0" style="margin:0 5px 0 5px">
+                    <tr>
+                        <td width="250">
+                            Welcome <asp:LoginName ID="loginName" runat="server" />
+                        </td>
+                        <td>
+                            <asp:Label ID="lblHeader" runat="server"></asp:Label>
+                        </td>
+                        <td width="250" class="comman_heading1" style="text-align:right; padding-right:10px">
+                            <asp:LoginView ID="lvAdmin" runat="server">
+                                <LoggedInTemplate>
+                                    <a href="ChangePassword.aspx">Change Password</a> &nbsp;   |  &nbsp;
+                                    <asp:LoginStatus ID="lsAdmin" runat="server" LogoutAction="Refresh" LogoutText="Logout" OnLoggedOut="LoggedOut" />
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </td>
+                    </tr>
+                </table>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="middle_page">
+                    <div id="middle_con2">
+                         <div id="middle_left_con2">
+                            <asp:DataList ID="dlAdminSection" runat="server" DataSourceID="sdsSections"
+                                DataKeyField="SectionID">
+                                <ItemTemplate>
+                                    <asp:HiddenField ID="hdnSectionID" runat="server" Value='<%# Eval("SectionID")%>' />
+                                    <div class="heading_box" style="margin-top:10px">
+                                        <span><%# Eval("SectionName") %></span>
+                                    </div>
+                                    <div class="indemandtopic">
+                                         <asp:DataList ID ="dlOptions" runat ="server" SkinID ="GridView" CellPadding="0" 
+                                            DataSourceID ="sdsOptions"  DataKeyField ="optionid" CssClass="dl"  >
+                                            <ItemTemplate >
+                                                <asp:LinkButton ID="lnk1" runat="server" 
+                                                    PostBackUrl='<%# "~/Admin/" + Eval("PageName")%>'> 
+                                                     <%# Eval("OptionName")%>
+                                                </asp:LinkButton>
+                                                <%--<asp:LinkButton ID="lnk1" runat="server" 
+                                                    PostBackUrl='<%# "~/Admin/" + Eval("PageName")%>'
+                                                    CssClass ='<%# SelectMenuStyle(Convert.ToString(Eval("PageName"))) %>'> 
+                                                     <%# Eval("OptionName")%>
+                                                </asp:LinkButton>--%>
+                                            </ItemTemplate>
+                                        </asp:DataList>
+                                        <asp:SqlDataSource ID ="sdsOptions"  runat ="server" 
+                                            ConnectionString ="<%$ ConnectionStrings:strconn %>"
+                                            CancelSelectOnNullParameter="False"                           
+                                            SelectCommand ="r_Options_Select" 
+                                            SelectCommandType ="StoredProcedure">
+                                            <SelectParameters>
+                                                <asp:ControlParameter Name="UserId" ControlID="hdnUserId" 
+                                                    PropertyName="Value" DefaultValue="1" />
+                                                <asp:ControlParameter Name="SectionId" ControlID="hdnSectionId" 
+                                                    PropertyName="Value" DefaultValue="1" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                    </div>
+                                </ItemTemplate>
+                            </asp:DataList>
+                            <asp:SqlDataSource ID ="sdsSections"  runat ="server" 
+                                ConnectionString ="<%$ ConnectionStrings:strconn %>"
+                                CancelSelectOnNullParameter="False"                           
+                                SelectCommand ="r_Sections_Select" 
+                                SelectCommandType ="StoredProcedure">
+                                <SelectParameters>
+                                    <asp:ControlParameter Name="UserId" ControlID="hdnUserId" 
+                                         PropertyName="Value" DefaultValue="1" />
+                                </SelectParameters>
+                            </asp:SqlDataSource>
+                            <asp:HiddenField ID="hdnUserId" runat="server" />
+                            
+                         </div>
+                         <div id="middle_right_con2">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    <%--This is page section--%>
+                                </asp:ContentPlaceHolder>
+                         </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="middle" class="footer_bg"><span class="footer_text">Copyright ©2013.</span></td>
+        </tr>
+    </table>
+
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder11" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+    </form>
+</body>
+</html>

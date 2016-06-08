@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ProductsMaster.master.cs" Inherits="ProductsMaster"  %>
+<%@ Register Src="~/UserControl/Menu.ascx" TagName="uc" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="Stylesheet" href="~/css/wcss.css" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    <title>Products</title>
+    <link href="<%=ResolveUrl("~/favicon.ico")%>" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="main-area">
+    	    <div class="work-area">
+        	    <div class="header">
+            	    <div class="feedback-sug"><a href="FeedbackSuggestion.aspx">Feedback / Suggestions</a></div>
+                
+				    <a href="Index.aspx" class="logo">
+                    </a>
+            	
+                    <div class="menu">
+                	    <asp:uc ID="topMenu" runat="server" />	
+                    </div>
+                
+                    <div>
+                	   <%-- <a href="#"><img src="Images/fb-icon.jpg" class="fb-icon" border="0" /></a>
+                        <a href="#"><img src="Images/in-icon.jpg" class="in-icon" border="0"/></a>--%>
+                    </div>
+                
+               
+                </div> <!-- end of header -->
+            <table width="929px" border="0" height="100%" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+           <div class="category-mainarea">
+	   		    <div class="category-listingarea">
+                    
+                            
+       	            <asp:ContentPlaceHolder ID="catListingPlaceHolder" runat="server">
+                        
+                    </asp:ContentPlaceHolder>
+       		    </div>
+           </div>  <!-- category listing area ends -->
+           </td>
+                        </tr>
+                    </table>
+           <!-----------------------------------top area ends---------------------------------------------------- -->    
+   
+   	      
+       
+         
+			    <div class="bottom-menu-area">
+            	    <div class="bottom-menu">
+                        <asp:uc ID="bottomMenu" runat="server" />
+				    </div>            
+                </div> <!-- bottom menu ends -->
+         
+         
+         	    <div class="bottom-line"></div>
+            
+            
+            	    <div class="bottom-text">
+		                <div class="copyrights">Copyrights at company. All rights reserved.</div>
+        			    <div class="designed-by">Designed By : Activelink </div>
+         		    </div>        
+            </div> <!-- end of work area -->
+        </div> <!-- end of main area -->
+    </form>
+</body>
+</html>

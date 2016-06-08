@@ -1,0 +1,664 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+	{
+		margin:0;
+		padding:0;
+		background-image:url(../images/bg.jpg);
+		width:100%;
+		height:100%;
+		font-family:Verdana;
+	}
+	
+.main-area
+	{
+		margin:auto;
+		width:1000px;
+		height:100%;
+		background-color:#FFFFFF;
+	}
+	
+.work-area
+	{
+		width:1000px;
+		height:100%;
+		background-color:#FFFFFF;
+	}		
+	
+.header
+	{
+		width:1000px;
+		height:165px;
+		background-image:url(../images/header.jpg);
+		background-repeat:no-repeat;
+	}	
+	
+.homeslider 
+{
+   font-family:'Monotype Corsiva';
+   font-size:17pt;
+   color:#FF0000;
+   background-color:#EBE6E0; 
+   text-align:center;
+   height:30px;
+   text-decoration:blink;
+}
+
+.feedback-sug
+	{
+		font-size:10px;
+		color:#000000;
+		text-align:right;
+		padding-right:10px;
+		width:150px;
+		float:right;
+	}	
+	
+.feedback-sug a
+	{
+		text-decoration:underline;
+		color:#000000;
+	}
+	
+.feedback-sug a:hover
+	{
+		text-decoration:none;
+	}	
+		
+.menu
+	{
+		font-size:12px;
+		height:20px;
+		width:535px;/* I changed it from 560px because on products listing page all of a sudden a gap occured between top section and middle section */
+		float:left;
+		margin-top:115px;
+		margin-left:69px;
+	}
+	
+.menu ul
+	{
+		padding:0;
+		margin:0;
+		list-style:none;
+	}
+	
+.menu ul li
+	{
+		font-size:12px;
+		float:left;
+	}	
+	
+.menu-sep	
+	{
+		padding-right:15px;
+		padding-left:15px;
+	}
+	
+.menu-selected
+	{
+		color:#B40404;
+        text-decoration:none;
+	}
+	
+.menu a
+	{
+		color:#000000;
+		text-decoration:none;
+	}
+	
+.menu a:hover
+	{
+		color:#B40404;
+		text-decoration:underline;
+	}	
+	
+.fb-icon
+	{
+		float:left;
+		margin-top:107px;
+	}	
+	
+.in-icon
+	{
+		float:left;
+		margin-top:107px;
+		margin-left:5px;
+	}	
+
+.slide-area
+	{
+		width:1000px;
+		height:435px;
+	}
+	
+.slide-img1
+	{
+		width:326px;
+		height:435px;
+		float:left;
+	}				
+
+.about-text
+	{
+		width:338px;
+		height:435px;
+		background-color:#000000;
+		font-size:18px;
+		color:#FFFFFF;
+		float:left;
+        font-family:'Monotype Corsiva'
+	}
+	
+.slide-img2
+	{
+		width:335px;
+		height:435px;
+		float:left;
+	}	
+
+.sidemenu {
+    border: 1px solid #DDDDDD;
+    position:relative;
+}
+
+.searchbox {
+    background:url("../Images/searchbox.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height:30px;
+    padding-left:20px;
+    font: bold 15px/28px Arial,Helvetica,sans-serif;
+    
+}
+
+
+.seperator
+	{
+		width:1000px;
+		height:10px;
+	}	
+	
+.bottom-area
+	{
+		width:1000px;
+		height:318px;
+	}
+	
+.box1
+	{
+		width:332px;
+		height:318px;
+		margin-left:10px;
+		float:left;
+	}		
+		
+.box-title
+	{
+		background-image:url(../images/box-title.jpg);
+		width:335px;
+		height:38px;
+		background-repeat:no-repeat;
+		font-size:14px;
+		color:#FFFFFF;
+		text-align:center;
+		line-height:37px;
+	}
+	
+.box-title a
+	{
+		color:#FFFFFF;
+		text-decoration:underline;
+	}
+	
+.box-title a:hover
+	{
+		color:#FFFFFF;
+		text-decoration:none;
+	}
+	
+.pic-box1
+	{
+		/*background-image:url(../images/pic-box1.jpg);*/
+		background-color:#AAB975;
+		border-radius:0px 0px 20px 20px;    
+		width:335px;
+		height:235px;
+		/*background-repeat:no-repeat;*/
+	}	
+
+.box2
+	{
+		width:312px;
+		height:318px;
+		margin-left:6px;
+		float:left;
+	}
+	
+.pic-box2
+	{
+		/*background-image:url(../images/pic-box2.jpg);*/
+		background-color:#AAB975;
+		border-radius:0px 0px 20px 20px;    
+		width:312px;
+		height:235px;
+		/*background-repeat:no-repeat;*/
+	}	
+
+.box-title2
+	{
+		background-image:url(../images/box-title2.jpg);
+		width:312px;
+		height:38px;
+		background-repeat:no-repeat;
+		font-size:14px;
+		color:#FFFFFF;
+		text-align:center;
+		line-height:37px;
+	}
+	
+.box-title2 a
+	{
+		color:#FFFFFF;
+		text-decoration:underline;
+	}
+	
+.box-title2 a:hover
+	{
+		color:#FFFFFF;
+		text-decoration:none;
+	}	
+
+.box3
+	{
+		width:300px;
+		height:318px;
+		float:left;
+	}
+	
+.box-title3
+	{
+		background-image:url(../images/box-title3.jpg);
+		width:300px;
+		height:38px;
+		background-repeat:no-repeat;
+		font-size:14px;
+		color:#FFFFFF;
+		text-align:center;
+		line-height:37px;
+	}	
+	
+.box-title3 a
+	{
+		color:#FFFFFF;
+		text-decoration:underline;
+	}
+	
+.box-title3 a:hover
+	{
+		color:#FFFFFF;
+		text-decoration:none;
+	}		
+	
+	
+	
+.pic-box3
+	{
+		/*background-image:url(../images/pic-box3.jpg);	*/
+		background-color:#AAB975;
+		border-radius:0px 0px 20px 20px;    
+		width:300px;
+		height:235px;
+		/*background-repeat:no-repeat;*/
+		color:#000000;
+        font-family:'Monotype Corsiva';
+		font-size:18px;
+		text-align:center;
+		padding-top:10px;
+	}	
+
+.bottom-menu-area
+	{
+		width:1000px;
+		height:20px;
+	}
+	
+.bottom-menu
+	{
+		text-align:center;
+		font-size:10px;
+		float:left;
+		width:560px;
+		margin-left:246px;
+	}
+
+.bottom-menu ul
+	{
+		margin:0;
+		padding:0;
+		list-style:none;
+		text-align:center;
+	}
+	
+.bottom-menu ul li
+	{
+		font-size:10px;
+		text-align:center;
+		float:left;
+	}
+	
+.bottom-menu a
+	{
+		color:#000000;
+		text-decoration:none;
+	}
+	
+.bottom-menu a:hover
+	{
+		color:#b40404;
+		text-decoration:underline;
+	}
+	
+.see-more
+	{
+		font-size:10px;
+		color:#000000;
+		text-align:right;
+	}
+	
+.see-more a
+	{
+		text-decoration:none;
+		color:#000000;
+	}	
+	
+.see-more a:hover
+	{
+		text-decoration:underline;
+	}	
+	
+.bottom-line
+	{
+		background-image:url(../images/bottom-line.jpg);
+		width:1000px;
+		height:20px;
+		background-repeat:repeat-x;
+	}
+	
+.bottom-text
+	{
+		width:1000px;
+		height:30px;
+	}
+
+.copyrights
+	{
+		font-size:10px;
+		color:#000000;
+		float:left;
+		line-height:30px;
+		padding-left:10px;
+	}
+			
+.designed-by
+	{
+		font-size:10px;
+		line-height:30px;
+		color:#000000;
+		float:right;
+		padding-right:10px;
+	}
+	
+.logo
+	{
+		background-image:url(../images/logo.png);
+		width:307px;
+		height:142px;
+		background-repeat:no-repeat;
+		float:left;
+	}	
+	
+.aboutus-mainarea
+	{
+		width:1000px;
+		height:500px;
+		background-color:#FFFFFF;
+		margin-bottom:50px;
+	}	
+	
+.aboutus-textarea
+	{
+		width:650px;
+		height:500px;
+		text-align:justify;
+		color:#000000;
+		font-size:12px;
+		margin-top:20px;
+		margin-left:50px;
+		line-height:20px;
+		float:left;
+	}
+	
+	.image_rounded_shadow img {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        border-radius:0px 0px 20px 20px;
+        -moz-border-radius:0px 0px 20px 20px;
+        -webkit-border-radius:6px;
+    }
+    
+.internal-header
+	{
+		font-size:14px;;
+		color:#be2525;
+		font-weight:bold;
+	}
+	
+.aboutus-scrollarea
+	{
+		width:300px;
+		height:500px;
+		float:left;
+	}	
+	
+.scroll-img
+	{
+		margin-top:20px;
+		margin-left:70px;
+	}
+	
+.enquiry-formarea
+	{
+		width:1000px;
+		height:500px;
+		background-color:#FFFFFF;
+		margin-bottom:50px;
+	}	
+	
+.google-maps
+	{
+		width:300px;
+		height:150px;
+		float:right;
+		border:1px solid #000000;
+		margin-top:50px;
+		margin-right:30px;
+	}	
+		
+.contact-textarea
+	{
+		width:600px;
+		height:300px;
+		text-align:justify;
+		color:#000000;
+		font-size:12px;
+		margin-top:20px;
+		margin-left:50px;
+		line-height:20px;
+		float:left;
+	}			
+	
+.contactus-mainarea
+	{
+		width:1000px;
+		height:500px;
+		background-color:#FFFFFF;
+		margin-bottom:50px;
+	}				
+	
+	
+.category-mainarea
+	{
+		width:1000px;
+		/*height:500px;*/
+		height:600px;
+		background-color:#FFFFFF;
+		margin-bottom:50px;
+	}
+	
+.category-listingarea
+	{
+		width:1000px;
+		/*height:800px; */
+		text-align:justify;
+		color:#000000;
+		font-size:12px;
+		/*margin-top:20px;
+		margin-left:50px;*/
+		/*margin-top:10px;*/
+		margin-left:10px;
+		/*line-height:20px;*/
+		float:left;
+	}	
+			
+.Product-Details
+{
+    border-bottom: 1px solid #000000;
+}
+
+.Product-Details-header
+{
+    border-bottom: 5px solid #000000;
+    font-weight:bold;
+}
+
+.Product-Details-Price
+{
+    font-size:30px;
+    font-weight:bold;
+}
+	
+.pic-box31
+{
+	/*background-image:url(../images/pic-box3.jpg);	*/
+    background-color:#AAB975;
+	border-radius:0px 0px 20px 20px;
+	width:300px;
+	height:235px;
+	background-repeat:no-repeat;
+	color:#000000;
+    font-family:'Monotype Corsiva';
+	font-size:18px;
+	text-align:center;
+	padding-top:40px;
+    padding-left:45px
+}
+
+#tooltip
+{
+    width: 410px !important;
+    height: 300px !important;
+    top: 45% !important;
+    left: 45% !important;
+    margin-left: -150px !important; /* Negative half of width. */
+    margin-top: -104px !important; /* Negative half of height. */
+    z-index: 1000 !important;
+    /*display: none;*/
+    background-color: #AAB975 !important;
+    color: black !important;
+    border: 10px solid #EBE6E0 !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    font-size:18px !important;
+    font-family:'Monotype Corsiva' !important;
+    text-align:center !important;
+}
+
+.parentDisable
+{
+    z-index:999;
+    width:100%;
+    height:100%;
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: #999999;
+    color: #aaa;
+    opacity: .96;
+    filter: alpha(opacity=50);
+            
+}
+#popup
+{
+    width:300;
+    height:300;
+    position:relative;
+    color: #000;
+    background-color: #fff;
+    top:25%;
+    background-image:url(catbg-1.gif);
+}
+#close
+{
+    position:absolute;
+    top:0;
+    right:0;
+}
+	
+	
+.offer-out {
+     border-left: 1px solid #DC8470;
+     margin-top: 20px;
+     display: block;
+    padding: 1px 0;
+    margin-bottom: 20px;
+    position: absolute;
+}	
+
+.offer-in {
+    background-color: #DC8470;
+    padding: 2px 5px;
+}
+
+.newformattxt
+{
+    color: #FFFFFF;
+    font-size: 11px;
+    text-transform: uppercase;
+    
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

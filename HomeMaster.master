@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HomeMaster.master.cs" Inherits="HomeMaster" %>
+<%@ Register Src="~/UserControl/Menu.ascx" TagName="uc" TagPrefix="asp"%>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zebo-tan - women wear</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="main-area">
+        <div class="work-area">
+            <div class="header">
+                <div class="feedback-sug"><a href="FeedbackSuggestion.aspx">Feedback / Suggestions</a></div>
+                <a href="Index.aspx" class="logo">
+                </a>
+                <div class="menu">
+                	<asp:uc ID="topMenu" runat="server" />
+                </div>
+                <div>
+                	<%--<a href="#" ><img src="images/fb-icon.png" title="Coming Soon" class="fb-icon" border="0"/></a>
+                    <a href="#" ><img src="images/in-icon.png" title="Coming Soon" class="in-icon" border="0"/></a>--%>
+                </div>
+            </div> <!-- end of header -->
+
+            
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+
+
+<!---------------------------------------------------------------------------------------------------- -->
+         
+			<div class="bottom-menu-area">
+            	<div class="bottom-menu">
+                    <asp:uc id="bottomMenu" runat="server" />
+				</div>            
+            </div> <!-- bottom menu ends -->
+            
+            <div class="bottom-line"></div>
+            
+            
+            <div class="bottom-text">
+		        <div class="copyrights">Copyrights at company. All rights reserved.</div>
+        		<div class="designed-by">Designed By : Activelink </div>
+         	</div>    
+
+       </div> <!-- end of work area -->
+    </div> <!-- end of main area -->   
+
+    </form>
+</body>
+</html>
+
+
